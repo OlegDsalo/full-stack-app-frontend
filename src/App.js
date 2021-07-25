@@ -6,7 +6,7 @@ import React, { useState, useEffect } from 'react';
 
 function App() {
 
-  const [outresponse, setResponse] = useState(null);
+  const [outresponse, setResponse] = useState([]);
   useEffect(() => {
 
     // fetch("http://localhost:3000")
@@ -17,7 +17,7 @@ function App() {
       .then(function (response) {
         // handle success
         // console.log(response);
-        // console.log();
+
         setResponse(response);
       })
       .catch(function (error) {
@@ -28,7 +28,7 @@ function App() {
         // always executed
 
       });
-  });
+  }, []);
 
   return (
     <>
